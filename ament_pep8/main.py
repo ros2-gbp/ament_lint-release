@@ -20,7 +20,7 @@ import sys
 from xml.sax.saxutils import escape
 from xml.sax.saxutils import quoteattr
 
-import pep8
+import pycodestyle
 
 
 def main(argv=sys.argv[1:]):
@@ -177,14 +177,14 @@ def get_xunit_content(report, testname):
     return xml
 
 
-class CustomStyleGuide(pep8.StyleGuide):
+class CustomStyleGuide(pycodestyle.StyleGuide):
 
     def input_file(self, filename, **kwargs):
         self.options.reporter.files.append(filename)
         return super(CustomStyleGuide, self).input_file(filename, **kwargs)
 
 
-class CustomReport(pep8.StandardReport):
+class CustomReport(pycodestyle.StandardReport):
 
     errors = []
     files = []

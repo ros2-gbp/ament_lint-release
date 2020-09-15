@@ -15,6 +15,7 @@ License:        @(License)
 Source0:        %{name}-%{version}.tar.gz
 @[if NoArch]@\nBuildArch:      noarch@\n@[end if]@
 
+Requires:       python%{python3_pkgversion}-pycodestyle
 @[for p in Depends]Requires:       @p@\n@[end for]@
 @[for p in sorted(BuildDepends + ['python%{python3_pkgversion}-devel'])]BuildRequires:  @p@\n@[end for]@
 @[for p in Conflicts]Conflicts:      @p@\n@[end for]@
