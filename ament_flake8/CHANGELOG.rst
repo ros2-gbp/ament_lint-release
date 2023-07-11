@@ -2,6 +2,9 @@
 Changelog for package ament_flake8
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.15.2 (2023-07-11)
+-------------------
+
 0.15.1 (2023-06-07)
 -------------------
 * Fix compatibility with flake8 version 5 (`#410 <https://github.com/ament/ament_lint/issues/410>`_)
