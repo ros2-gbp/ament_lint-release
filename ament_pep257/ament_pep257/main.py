@@ -131,7 +131,7 @@ def main(argv=sys.argv[1:]):
         print('No problems found')
         rc = 0
     else:
-        print('%d errors' % error_count, file=sys.stderr)
+        print('%d errors' % error_count)
         rc = 1
 
     # generate xunit file
@@ -212,21 +212,21 @@ def generate_pep257_report(paths, excludes, ignore, select, convention, add_igno
                 print(
                     '%s:%d %s: %s' %
                     (pep257_error.filename, pep257_error.line, pep257_error.definition,
-                     pep257_error.message), file=sys.stderr)
+                     pep257_error.message))
             elif isinstance(pep257_error, SyntaxError):
                 errors.append({
                     'category': str(type(pep257_error)),
                     'linenumber': '-',
                     'message': 'invalid syntax in file',
                 })
-                print('%s: invalid syntax' % filename, file=sys.stderr)
+                print('%s: invalid syntax' % filename)
             else:
                 errors.append({
                     'category': 'unknown',
                     'linenumber': '-',
                     'message': str(pep257_error),
                 })
-                print('%s: %s' % (filename, pep257_error), file=sys.stderr)
+                print('%s: %s' % (filename, pep257_error))
         report.append((filename, errors))
     return report
 
@@ -251,13 +251,14 @@ def get_xunit_content(report, testname, elapsed):
 """ % data
 
     for (filename, errors) in report:
+
         if errors:
             # report each error as a failing testcase
             for error in errors:
                 data = {
                     'quoted_location': quoteattr(
-                        '%s (%s:%s)' % (
-                            error['category'], filename, str(error['linenumber']))),
+                        '%s (%s:%d)' % (
+                            error['category'], filename, error['linenumber'])),
                     'testname': testname,
                     'quoted_message': quoteattr(error['message']),
                 }
