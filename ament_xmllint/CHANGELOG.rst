@@ -2,6 +2,9 @@
 Changelog for package ament_xmllint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.16.2 (2023-12-26)
+-------------------
+
 0.16.1 (2023-11-06)
 -------------------
 * (ament_xmllint) add extensions argument (`#456 <https://github.com/ament/ament_lint/issues/456>`_)
