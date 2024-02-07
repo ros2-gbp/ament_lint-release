@@ -2,29 +2,33 @@
 Changelog for package ament_flake8
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.12.10 (2024-01-24)
---------------------
-* Changes to make ament_flake8 work with v6+ (`#459 <https://github.com/ament/ament_lint/issues/459>`_) (`#464 <https://github.com/ament/ament_lint/issues/464>`_)
-* Contributors: mergify[bot]
-
-0.12.9 (2023-11-13)
+0.14.3 (2024-02-07)
 -------------------
-* [backport humble] Fix compatibility with flake8 version 5 (`#387 <https://github.com/ament/ament_lint/issues/387>`_, `#410 <https://github.com/ament/ament_lint/issues/410>`_) (`#451 <https://github.com/ament/ament_lint/issues/451>`_)
-* Contributors: Emerson Knapp
+* Changes to make ament_flake8 work with v6+ (`#463 <https://github.com/ament/ament_lint/issues/463>`_)
+* Fix compatibility with flake8 version 5 (`#465 <https://github.com/ament/ament_lint/issues/465>`_)
+* Contributors: Chris Lalancette, Michael Carroll, Timo Röhling
 
-0.12.8 (2023-09-19)
+0.14.2 (2023-09-08)
 -------------------
 
-0.12.7 (2023-07-17)
+0.14.1 (2023-04-11)
 -------------------
 
-0.12.6 (2023-04-25)
+0.14.0 (2023-02-14)
+-------------------
+* [rolling] Update maintainers - 2022-11-07 (`#421 <https://github.com/ament/ament_lint/issues/421>`_)
+* Contributors: Audrow Nash
+
+0.13.2 (2022-09-13)
+-------------------
+* Fix exclude regression (`#387 <https://github.com/ament/ament_lint/issues/387>`_)
+* Update maintainers (`#379 <https://github.com/ament/ament_lint/issues/379>`_)
+* Contributors: methylDragon
+
+0.13.1 (2022-05-09)
 -------------------
 
-0.12.5 (2023-01-12)
--------------------
-
-0.12.4 (2022-05-09)
+0.13.0 (2022-04-29)
 -------------------
 
 0.12.3 (2022-04-08)
