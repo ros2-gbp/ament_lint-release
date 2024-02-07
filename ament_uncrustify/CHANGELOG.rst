@@ -2,6 +2,11 @@
 Changelog for package ament_uncrustify
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.16.3 (2024-02-07)
+-------------------
+* Fix a flake8 warning in ament_uncrustify. (`#471 <https://github.com/ament/ament_lint/issues/471>`_)
+* Contributors: Chris Lalancette
+
 0.16.2 (2023-12-26)
 -------------------
 
