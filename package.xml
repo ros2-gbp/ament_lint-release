@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="2">
   <name>ament_lint</name>
-  <version>0.16.2</version>
+  <version>0.16.3</version>
   <description>
     Providing common API for ament linter packages.
   </description>
@@ -16,6 +16,8 @@
   <author>Claire Wang</author>
   <author>Dirk Thomas</author>
   <author email="michel@ekumenlabs.com">Michel Hidalgo</author>
+
+  <test_depend>python3-pytest</test_depend>
 
   <export>
     <build_type>ament_python</build_type>
