@@ -299,5 +299,4 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/ament/ament_lint.git
-    version: 0.16.3
-    version_saved: :{auto}
+    version: :{auto}
