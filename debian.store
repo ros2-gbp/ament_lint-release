@@ -1,1 +1,1 @@
-{"base": "afef27b86", "parent": "debian/rolling/ament_cmake_xmllint", "previous": "6a669bc03", "trim": "", "trimbase": ""}
+{"base": "d52610ad8", "parent": "debian/jazzy/ament_cmake_xmllint", "previous": "296c72fa7", "trim": "", "trimbase": ""}
