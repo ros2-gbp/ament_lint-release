@@ -83,6 +83,9 @@ def main(argv=sys.argv[1:]):
         nargs='*',
         help='Exclude C/C++ files from being checked.')
     parser.add_argument(
+        '--output', type=str,
+        help='The --output option for cpplint')
+    parser.add_argument(
         'paths',
         nargs='*',
         default=[os.curdir],
@@ -102,6 +105,8 @@ def main(argv=sys.argv[1:]):
     argv = []
     # collect category based counts
     argv.append('--counting=detailed')
+    if args.output:
+        argv.append('--output=%s' % args.output)
     argv.append('--extensions=%s' % ','.join(extensions))
     argv.append('--headers=%s' % ','.join(headers))
     filters = [
@@ -305,11 +310,12 @@ def get_xunit_content(report, testname, elapsed):
         if errors:
             # report each cpplint error as a failing testcase
             for error in errors:
+                linenum = str(error['linenum']) if error['linenum'] is not None else 'None'
                 data = {
                     'quoted_name': quoteattr(
-                        '%s [%s] (%s:%d)' % (
+                        '%s [%s] (%s:%s)' % (
                             error['category'], error['confidence'],
-                            filename, error['linenum'])),
+                            filename, linenum)),
                     'testname': testname,
                     'quoted_message': quoteattr(error['message']),
                 }
