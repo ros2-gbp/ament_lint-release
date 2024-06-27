@@ -1,0 +1,12 @@
+Source: ros-jazzy-ament-cmake-pycodestyle
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake-copyright <!nocheck>, ros-jazzy-ament-cmake-core, ros-jazzy-ament-cmake-lint-cmake <!nocheck>, ros-jazzy-ament-cmake-test, ros-jazzy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-ament-cmake-pycodestyle
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-ament-cmake-test, ros-jazzy-ament-pycodestyle, ros-jazzy-ros-workspace
+Description: The CMake API for ament_pycodestyle to check code against the style conventions in PEP 8.
