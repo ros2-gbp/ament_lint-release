@@ -2,42 +2,16 @@
 Changelog for package ament_flake8
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.17.1 (2024-06-27)
+0.14.4 (2024-07-11)
 -------------------
 
-0.17.0 (2024-04-16)
+0.14.3 (2024-02-07)
 -------------------
+* Changes to make ament_flake8 work with v6+ (`#463 <https://github.com/ament/ament_lint/issues/463>`_)
+* Fix compatibility with flake8 version 5 (`#465 <https://github.com/ament/ament_lint/issues/465>`_)
+* Contributors: Chris Lalancette, Michael Carroll, Timo Röhling
 
-0.16.4 (2024-03-28)
--------------------
-* Update maintainer list in package.xml files (`#474 <https://github.com/ament/ament_lint/issues/474>`_)
-* Contributors: Michael Jeronimo
-
-0.16.3 (2024-02-07)
--------------------
-
-0.16.2 (2023-12-26)
--------------------
-* Changes to make ament_flake8 work with v6+ (`#459 <https://github.com/ament/ament_lint/issues/459>`_)
-* Contributors: Michael Carroll
-
-0.16.1 (2023-11-06)
--------------------
-
-0.16.0 (2023-10-04)
--------------------
-* Add additional dependencies to ament_flake8. (`#454 <https://github.com/ament/ament_lint/issues/454>`_)
-* Contributors: Chris Lalancette
-
-0.15.2 (2023-07-11)
--------------------
-
-0.15.1 (2023-06-07)
--------------------
-* Fix compatibility with flake8 version 5 (`#410 <https://github.com/ament/ament_lint/issues/410>`_)
-* Contributors: Timo Röhling
-
-0.15.0 (2023-04-27)
+0.14.2 (2023-09-08)
 -------------------
 
 0.14.1 (2023-04-11)

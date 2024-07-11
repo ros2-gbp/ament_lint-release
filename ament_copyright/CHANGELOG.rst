@@ -2,44 +2,13 @@
 Changelog for package ament_copyright
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.17.1 (2024-06-27)
--------------------
-* Fix error path for search_copyright_information. (`#491 <https://github.com/ament/ament_lint/issues/491>`_) (`#492 <https://github.com/ament/ament_lint/issues/492>`_)
-  Callers now expect it to return a 4-tuple, but in the
-  case that there was no data it was only returning a 2-tuple.
-  (cherry picked from commit f5d1cad324be721f87fa87a416aa70701e75dcca)
-  Co-authored-by: Chris Lalancette <clalancette@gmail.com>
-* Contributors: mergify[bot]
-
-0.17.0 (2024-04-16)
+0.14.4 (2024-07-11)
 -------------------
 
-0.16.4 (2024-03-28)
--------------------
-* Small fixes for modern flake8. (`#484 <https://github.com/ament/ament_lint/issues/484>`_)
-* Fix add-copyright year function (`#466 <https://github.com/ament/ament_lint/issues/466>`_)
-* Update maintainer list in package.xml files (`#474 <https://github.com/ament/ament_lint/issues/474>`_)
-* Contributors: Chris Lalancette, Lloyd Pearson, Michael Jeronimo
-
-0.16.3 (2024-02-07)
+0.14.3 (2024-02-07)
 -------------------
 
-0.16.2 (2023-12-26)
--------------------
-
-0.16.1 (2023-11-06)
--------------------
-
-0.16.0 (2023-10-04)
--------------------
-
-0.15.2 (2023-07-11)
--------------------
-
-0.15.1 (2023-06-07)
--------------------
-
-0.15.0 (2023-04-27)
+0.14.2 (2023-09-08)
 -------------------
 
 0.14.1 (2023-04-11)

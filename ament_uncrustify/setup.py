@@ -5,7 +5,7 @@ package_name = 'ament_uncrustify'
 
 setup(
     name=package_name,
-    version='0.17.1',
+    version='0.14.4',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -14,8 +14,7 @@ setup(
     ],
     install_requires=['setuptools'],
     package_data={'': [
-        'configuration/ament_code_style_0_72.cfg',
-        'configuration/ament_code_style_0_78.cfg',
+        'configuration/ament_code_style.cfg',
     ]},
     zip_safe=False,
     author='Dirk Thomas',

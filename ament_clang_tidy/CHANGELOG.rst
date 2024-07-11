@@ -2,40 +2,15 @@
 Changelog for package ament_clang_tidy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.17.1 (2024-06-27)
+0.14.4 (2024-07-11)
+-------------------
+* Fix Reporting when WarningsAsErrors is specified in config (`#489 <https://github.com/ament/ament_lint/issues/489>`_)
+* Contributors: Matt Condino
+
+0.14.3 (2024-02-07)
 -------------------
 
-0.17.0 (2024-04-16)
--------------------
-
-0.16.4 (2024-03-28)
--------------------
-* Update maintainer list in package.xml files (`#474 <https://github.com/ament/ament_lint/issues/474>`_)
-* Contributors: Michael Jeronimo
-
-0.16.3 (2024-02-07)
--------------------
-* Fix a warning from newer versions of flake8. (`#469 <https://github.com/ament/ament_lint/issues/469>`_)
-* Contributors: Chris Lalancette
-
-0.16.2 (2023-12-26)
--------------------
-
-0.16.1 (2023-11-06)
--------------------
-* remove AMENT_IGNORE check in clang-tidy when looking for compilation db (`#441 <https://github.com/ament/ament_lint/issues/441>`_)
-* Contributors: Alberto Soragna
-
-0.16.0 (2023-10-04)
--------------------
-
-0.15.2 (2023-07-11)
--------------------
-
-0.15.1 (2023-06-07)
--------------------
-
-0.15.0 (2023-04-27)
+0.14.2 (2023-09-08)
 -------------------
 
 0.14.1 (2023-04-11)
