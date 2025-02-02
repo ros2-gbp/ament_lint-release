@@ -2,6 +2,11 @@
 Changelog for package ament_mypy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.19.1 (2025-02-02)
+-------------------
+* Add support for type stubs (`#516 <https://github.com/ament/ament_lint/issues/516>`_)
+* Contributors: Michael Carlstrom
+
 0.19.0 (2024-11-20)
 -------------------
 * Add ament_xmllint testing for all packages that we can. (`#508 <https://github.com/ament/ament_lint/issues/508>`_)
