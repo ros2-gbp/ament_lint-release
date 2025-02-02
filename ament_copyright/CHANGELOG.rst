@@ -2,6 +2,11 @@
 Changelog for package ament_copyright
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.19.1 (2025-02-02)
+-------------------
+* Improve ament_copyright performance drastically. (`#515 <https://github.com/ament/ament_lint/issues/515>`_)
+* Contributors: Chris Lalancette
+
 0.19.0 (2024-11-20)
 -------------------
 
