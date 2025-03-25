@@ -2,6 +2,9 @@
 Changelog for package ament_clang_tidy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.12.12 (2025-03-25)
+--------------------
+
 0.12.11 (2024-05-15)
 --------------------
 * ament_clang_tidy - Fix Reporting when WarningsAsErrors is specified in config (`#397 <https://github.com/ament/ament_lint/issues/397>`_) (`#488 <https://github.com/ament/ament_lint/issues/488>`_)
