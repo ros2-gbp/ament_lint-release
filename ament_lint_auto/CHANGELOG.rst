@@ -2,6 +2,11 @@
 Changelog for package ament_lint_auto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.12.12 (2025-03-25)
+--------------------
+* Add docu for AMENT_LINT_AUTO_EXCLUDE (`#524 <https://github.com/ament/ament_lint/issues/524>`_) (`#526 <https://github.com/ament/ament_lint/issues/526>`_)
+* Contributors: mergify[bot]
+
 0.12.11 (2024-05-15)
 --------------------
 
