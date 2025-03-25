@@ -52,25 +52,22 @@ class FileDescriptor:
         with open(self.path, 'r', encoding='utf-8') as h:
             self.content = h.read()
 
-    def parse(self, licenses=None, known_copyrights=None):
+    def parse(self):
         raise NotImplementedError()
 
-    def identify_license(self, content, license_part, licenses):
+    def identify_license(self, content, license_part):
         if content is None:
             return
-        formatted_content = remove_formatting(content)
 
-        for name, license_ in licenses.items():
+        for name, license_ in get_licenses().items():
             templates = getattr(license_, license_part)
             for template in templates:
-                last_index = -1
                 formatted_template = remove_formatting(template)
-                template_sections = split_template(formatted_template,
-                                                   ['{copyright_holder}', '{copyright}'])
-                for license_section in template_sections:
+                last_index = -1
+                for license_section in formatted_template.split('{copyright_holder}'):
                     # OK, now look for each section of the license in the incoming
                     # content.
-                    index = formatted_content.find(license_section.strip())
+                    index = remove_formatting(content).find(license_section.strip())
                     if index == -1 or index <= last_index:
                         # Some part of the license is not in the content, or the license
                         # is rearranged, this license doesn't match.
@@ -91,7 +88,8 @@ class SourceDescriptor(FileDescriptor):
 
         self.copyright_identifiers = []
 
-    def identify_copyright(self, known_copyrights):
+    def identify_copyright(self):
+        known_copyrights = get_copyright_names()
         for c in self.copyrights:
             found_name = c.name
             for identifier, name in known_copyrights.items():
@@ -101,7 +99,7 @@ class SourceDescriptor(FileDescriptor):
             else:
                 self.copyright_identifiers.append(UNKNOWN_IDENTIFIER)
 
-    def parse(self, licenses=None, known_copyrights=None):
+    def parse(self):
         self.read()
         if not self.content:
             return
@@ -112,26 +110,18 @@ class SourceDescriptor(FileDescriptor):
 
         # get first comment block without leading comment tokens
         block, _ = get_comment_block(self.content, index)
-        copyrights, _, _, remaining_block = search_copyright_information(block)
-
-        if len(copyrights) == 0:
-            block = get_multiline_comment_block(self.content, index)
-            copyrights, _, _, remaining_block = search_copyright_information(block)
-
-        if len(copyrights) == 0:
+        if not block:
             return
+        copyrights, remaining_block = search_copyright_information(block)
+        if not copyrights:
+            return None
 
         self.copyrights = copyrights
 
-        if licenses is None:
-            licenses = get_licenses()
-        if known_copyrights is None:
-            known_copyrights = get_copyright_names()
-
-        self.identify_copyright(known_copyrights)
+        self.identify_copyright()
 
         content = '{copyright}' + remaining_block
-        self.identify_license(content, 'file_headers', licenses)
+        self.identify_license(content, 'file_headers')
 
 
 class ContributingDescriptor(FileDescriptor):
@@ -139,15 +129,12 @@ class ContributingDescriptor(FileDescriptor):
     def __init__(self, path):
         super(ContributingDescriptor, self).__init__(CONTRIBUTING_FILETYPE, path)
 
-    def parse(self, licenses=None, known_copyrights=None):
+    def parse(self):
         self.read()
         if not self.content:
             return
 
-        if licenses is None:
-            licenses = get_licenses()
-
-        self.identify_license(self.content, 'contributing_files', licenses)
+        self.identify_license(self.content, 'contributing_files')
 
 
 class LicenseDescriptor(FileDescriptor):
@@ -155,23 +142,15 @@ class LicenseDescriptor(FileDescriptor):
     def __init__(self, path):
         super(LicenseDescriptor, self).__init__(LICENSE_FILETYPE, path)
 
-    def parse(self, licenses=None, known_copyrights=None):
+    def parse(self):
         self.read()
         if not self.content:
             return
 
-        if licenses is None:
-            licenses = get_licenses()
-
-        self.identify_license(self.content, 'license_files', licenses)
+        self.identify_license(self.content, 'license_files')
 
 
-def parse_file(path, licenses=None, known_copyrights=None):
-    if licenses is None:
-        licenses = get_licenses()
-    if known_copyrights is None:
-        known_copyrights = get_copyright_names()
-
+def parse_file(path):
     filetype = determine_filetype(path)
     if filetype == SOURCE_FILETYPE:
         d = SourceDescriptor(path)
@@ -181,7 +160,7 @@ def parse_file(path, licenses=None, known_copyrights=None):
         d = LicenseDescriptor(path)
     else:
         return None
-    d.parse(licenses, known_copyrights)
+    d.parse()
     return d
 
 
@@ -194,33 +173,27 @@ def determine_filetype(path):
 
 
 def search_copyright_information(content):
-    if content is None:
-        return [], [], [], content
     # regex for matching years or year ranges (yyyy-yyyy) separated by colons
     year = r'\d{4}'
     year_range = '%s-%s' % (year, year)
     year_or_year_range = '(?:%s|%s)' % (year, year_range)
     pattern = r'^[^\n\r]?\s*(?:\\copyright\s*)?' \
-              r'copyright(?:\s+\(c\))?\s+(%s(?:,\s*%s)*),?\s+([^\n\r]+)$' % \
+              r'Copyright(?:\s+\(c\))?\s+(%s(?:,\s*%s)*),?\s+([^\n\r]+)$' % \
         (year_or_year_range, year_or_year_range)
-    regex = re.compile(pattern, re.DOTALL | re.MULTILINE | re.IGNORECASE)
+    regex = re.compile(pattern, re.DOTALL | re.MULTILINE)
 
     copyrights = []
-    years_spans = []
-    name_spans = []
     while True:
         match = regex.search(content)
         if not match:
             break
         years_span, name_span = match.span(1), match.span(2)
-        years_spans.append(years_span)
-        name_spans.append(name_span)
         years = content[years_span[0]:years_span[1]]
         name = content[name_span[0]:name_span[1]]
         copyrights.append(CopyrightDescriptor(name, years))
         content = content[name_span[1]:]
 
-    return copyrights, years_spans, name_spans, content
+    return copyrights, content
 
 
 def scan_past_coding_and_shebang_lines(content):
@@ -301,49 +274,6 @@ def get_comment_block(content, index):
     return '\n'.join(lines), start_index + len(comment_token) + 1
 
 
-def get_multiline_comment_block(content, index):
-    patterns = [('^(/[*])', '([*]/)$'),
-                ('^(<!--)', '(-->)$')]
-    for pattern_pair in patterns:
-        start_pattern, end_pattern = pattern_pair
-        # find the first match of the comment start token
-        # also accept BOM if present
-        if index == 0 and content[0] == '\ufeff':
-            start_pattern = start_pattern[0] + '\ufeff' + start_pattern[1:]
-        start_regex = re.compile(start_pattern, re.MULTILINE)
-        start_match = start_regex.search(content, index)
-        if not start_match:
-            continue
-        start_index = start_match.start(1)
-
-        # find the first match of the comment end token
-        end_regex = re.compile(end_pattern, re.MULTILINE)
-        end_match = end_regex.search(content, index)
-        if not end_match:
-            continue
-        end_index = end_match.start(1)
-
-        # collect all lines between start and end (open interval) and strip out any common prefix
-        block = content[start_index:end_index]
-        block_lines = block.splitlines()
-        if len(block_lines) == 1:
-            prefixed_lines = block_lines
-        elif len(block_lines) == 2:
-            prefixed_lines = block_lines[1:]
-        else:
-            prefixed_lines = block_lines[1:-1]
-
-        if len(prefixed_lines) > 1:
-            line_prefix = os.path.commonprefix(prefixed_lines)
-            lines = [line[len(line_prefix):] for line in prefixed_lines]
-        else:
-            # Single-line header does not have a common prefix to strip out
-            lines = prefixed_lines
-
-        return '\n'.join(lines)
-    return None
-
-
 def scan_past_empty_lines(content, index):
     while is_empty_line(content, index):
         index = get_index_of_next_line(content, index)
@@ -356,16 +286,3 @@ def is_empty_line(content, index):
 
 def remove_formatting(text):
     return ' '.join(filter(None, text.split()))
-
-
-# Flat list of sections split on all separators provided
-def split_template(sections, separators):
-    if not isinstance(sections, list):
-        return split_template([sections], separators)
-    elif len(separators) > 1:
-        return sum([split_template([section], separators[0:1]) for section
-                    in sum([split_template([section], separators[1:])
-                            for section in sections], [])], [])
-    else:
-        return list(filter(lambda s: len(s) > 0,
-                           sum([section.split(separators[0]) for section in sections], [])))
