@@ -2,6 +2,11 @@
 Changelog for package ament_mypy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.12.12 (2025-03-25)
+--------------------
+* Add support for type stubs (`#516 <https://github.com/ament/ament_lint/issues/516>`_) (`#521 <https://github.com/ament/ament_lint/issues/521>`_)
+* Contributors: mergify[bot]
+
 0.12.11 (2024-05-15)
 --------------------
 
