@@ -154,8 +154,8 @@ def main(argv=sys.argv[1:]):
             cmd.append('--system-headers')
 
         def is_gtest_source(file_name):
-            if(file_name == 'gtest_main.cc' or file_name == 'gtest-all.cc'
-               or file_name == 'gmock_main.cc' or file_name == 'gmock-all.cc'):
+            if file_name == 'gtest_main.cc' or file_name == 'gtest-all.cc' \
+               or file_name == 'gmock_main.cc' or file_name == 'gmock-all.cc':
                 return True
             return False
 
@@ -165,15 +165,14 @@ def main(argv=sys.argv[1:]):
         def start_subprocess(full_cmd):
             output = ''
             try:
-                output = subprocess.check_output(full_cmd,
-                                                 stderr=subprocess.DEVNULL).strip().decode()
+                output = subprocess.check_output(
+                    full_cmd,
+                    stderr=subprocess.DEVNULL
+                ).decode()
             except subprocess.CalledProcessError as e:
                 print('The invocation of "%s" failed with error code %d: %s' %
                       (os.path.basename(clang_tidy_bin), e.returncode, e),
                       file=sys.stderr)
-                # Attempt to recover output, if any was found (eg - if
-                # WarningsAsErrors was specified in the config file).
-                output = e.output.decode('utf-8')
             return output
 
         files = []
@@ -204,7 +203,7 @@ def main(argv=sys.argv[1:]):
     for compilation_db in compilation_dbs:
         package_dir = os.path.dirname(compilation_db)
         package_name = os.path.basename(package_dir)
-        print('found compilation database for package "%s"...' % package_name)
+        print(f"found compilation database for package '{package_name}' at '{compilation_db}'")
         (source_files, output) = invoke_clang_tidy(compilation_db)
         files += source_files
         outputs.append(output)
@@ -278,9 +277,13 @@ def get_compilation_db_files(paths):
     for path in paths:
         if os.path.isdir(path):
             for dirpath, dirnames, filenames in os.walk(path):
-                if 'AMENT_IGNORE' in dirnames + filenames:
-                    dirnames[:] = []
-                    continue
+                # NOTE: here we don't check for the AMENT_IGNORE file.
+                # This function tries to find compile_commands.json file in the build folders.
+                # Build folders always include a AMENT_IGNORE file, so checking for it would
+                # result in not finding any compilation db. The check would also be redundant
+                # because if a source folder was marked with AMENT_IGNORE, then
+                # the compile_commands.json will not be present in relevant build folder.
+
                 # ignore folder starting with . or _
                 dirnames[:] = [d for d in dirnames if d[0] not in ['.', '_']]
                 dirnames.sort()

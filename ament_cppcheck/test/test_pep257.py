@@ -1,4 +1,4 @@
-# Copyright 2016 Open Source Robotics Foundation, Inc.
+# Copyright 2021 Open Source Robotics Foundation, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,9 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-file(GLOB_RECURSE _python_files FOLLOW_SYMLINKS "*.py")
-if(_python_files)
-  message(STATUS "Added test 'flake8' to check Python code syntax and style conventions")
-  message(STATUS "Configured 'flake8' exclude dirs and/or files: ${AMENT_LINT_AUTO_FILE_EXCLUDE}")
-  ament_flake8(EXCLUDE ${AMENT_LINT_AUTO_FILE_EXCLUDE})
-endif()
+from ament_pep257.main import main
+import pytest
+
+
+@pytest.mark.linter
+@pytest.mark.pep257
+def test_pep257():
+    rc = main(argv=['.', 'test'])
+    assert rc == 0, 'Found code style errors / warnings'
