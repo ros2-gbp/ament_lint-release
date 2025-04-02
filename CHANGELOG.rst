@@ -2,6 +2,9 @@
 Changelog for package ament_copyright
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.17.2 (2025-04-02)
+-------------------
+
 0.17.1 (2024-06-27)
 -------------------
 * Fix error path for search_copyright_information. (`#491 <https://github.com/ament/ament_lint/issues/491>`_) (`#492 <https://github.com/ament/ament_lint/issues/492>`_)
