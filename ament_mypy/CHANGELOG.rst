@@ -2,6 +2,12 @@
 Changelog for package ament_mypy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.19.2 (2025-04-17)
+-------------------
+* Fix Windows Regression by removing removesuffix() (`#530 <https://github.com/ament/ament_lint/issues/530>`_)
+* Export typing information (`#487 <https://github.com/ament/ament_lint/issues/487>`_)
+* Contributors: Michael Carlstrom
+
 0.19.1 (2025-02-02)
 -------------------
 * Add support for type stubs (`#516 <https://github.com/ament/ament_lint/issues/516>`_)
