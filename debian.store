@@ -1,1 +1,1 @@
-{"base": "7bea7b78c", "parent": "debian/rolling/ament_cmake_clang_tidy", "previous": "6160069e1", "trim": "", "trimbase": ""}
+{"base": "862c3fd1276b", "parent": "debian/rolling/ament_cmake_clang_tidy", "previous": "b19bd7f052c3", "trim": "", "trimbase": ""}
