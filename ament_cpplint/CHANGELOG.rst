@@ -2,10 +2,23 @@
 Changelog for package ament_cpplint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.17.2 (2025-04-02)
+0.19.2 (2025-04-17)
+-------------------
+* Enable a quiet mode for cpplint (`#532 <https://github.com/ament/ament_lint/issues/532>`_)
+* Contributors: Nils-Christian Iseke
+
+0.19.1 (2025-02-02)
 -------------------
 
-0.17.1 (2024-06-27)
+0.19.0 (2024-11-20)
+-------------------
+* Add ament_xmllint testing for all packages that we can. (`#508 <https://github.com/ament/ament_lint/issues/508>`_)
+* Contributors: Chris Lalancette
+
+0.18.1 (2024-06-17)
+-------------------
+
+0.18.0 (2024-04-26)
 -------------------
 
 0.17.0 (2024-04-16)

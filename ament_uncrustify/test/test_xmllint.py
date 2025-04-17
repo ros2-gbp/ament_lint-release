@@ -11,9 +11,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from _pytest.config import Config
+
+from ament_xmllint.main import main
+import pytest
 
 
-def pytest_configure(config: Config) -> None:
-    config.addinivalue_line(
-        'markers', 'mypy: marks tests checking for mypy compliance')
+@pytest.mark.linter
+@pytest.mark.xmllint
+def test_xmllint():
+    rc = main(argv=[])
+    assert rc == 0, 'Found errors'
