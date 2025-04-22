@@ -1,0 +1,12 @@
+Source: ros-kilted-ament-lint-common
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake-core, ros-kilted-ament-cmake-export-dependencies, ros-kilted-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kilted-ament-lint-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-ament-cmake-copyright, ros-kilted-ament-cmake-core, ros-kilted-ament-cmake-cppcheck, ros-kilted-ament-cmake-cpplint, ros-kilted-ament-cmake-flake8, ros-kilted-ament-cmake-lint-cmake, ros-kilted-ament-cmake-pep257, ros-kilted-ament-cmake-uncrustify, ros-kilted-ament-cmake-xmllint, ros-kilted-ros-workspace
+Description: The list of commonly used linters in the ament build system in CMake.
