@@ -2,6 +2,11 @@
 Changelog for package ament_cmake_pclint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.1 (2025-06-19)
+-------------------
+* Fix cmake deprecation (`#539 <https://github.com/ament/ament_lint/issues/539>`_)
+* Contributors: mosfet80
+
 0.20.0 (2025-04-24)
 -------------------
 
