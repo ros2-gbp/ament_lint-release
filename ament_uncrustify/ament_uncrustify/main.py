@@ -32,40 +32,9 @@ from xml.sax.saxutils import quoteattr
 
 
 def main(argv=sys.argv[1:]):
-    uncrustify_bin = find_executable('uncrustify')
-    if not uncrustify_bin:
-        print("Could not find 'uncrustify' executable", file=sys.stderr)
-        return 1
-
-    try:
-        cmd = [uncrustify_bin, '--version']
-        version_output = subprocess.check_output(cmd)
-    except subprocess.CalledProcessError as e:
-        if e.output:
-            print(e.output.decode(), file=sys.stderr)
-        print("The invocation of 'uncrustify' failed with error code %d: %s" %
-              (e.returncode, e), file=sys.stderr)
-        return 1
-
-    # Version 0.78.1 is different enough that we have a specific
-    # configuration file for it.  Anything before that uses the 0.72 one.
-    # The strings that uncrustify can print vary depending on how it was
-    # built; common variations are "Uncrustify_d-0.78.1"
-    # and "Uncrustify-0.72.0_f".
-    version_match = re.match(rb'^Uncrustify[^0-9]*([0-9]*\.[0-9]*\.[0-9]*).*$', version_output)
-    if version_match is None or len(version_match.groups()) != 1:
-        print("Invalid uncrustify version '%s'" % (version_output))
-        return 1
-
-    version = version_match.group(1)
-    if version == b'0.78.1':
-        default_config_file = 'ament_code_style_0_78.cfg'
-    else:
-        default_config_file = 'ament_code_style_0_72.cfg'
-
-    default_config_path = os.path.join(
+    config_file = os.path.join(
         os.path.dirname(__file__),
-        'configuration', default_config_file)
+        'configuration', 'ament_code_style.cfg')
 
     c_extensions = ['c', 'cc', 'h', 'hh']
     cpp_extensions = ['cpp', 'cxx', 'hpp', 'hxx']
@@ -76,7 +45,7 @@ def main(argv=sys.argv[1:]):
     parser.add_argument(
         '-c',
         metavar='CFG',
-        default=default_config_path,
+        default=config_file,
         dest='config_file',
         help='The config file')
     parser.add_argument(
@@ -150,6 +119,11 @@ def main(argv=sys.argv[1:]):
             print('No files found', file=sys.stderr)
             return 1
 
+        uncrustify_bin = find_executable('uncrustify')
+        if not uncrustify_bin:
+            print("Could not find 'uncrustify' executable", file=sys.stderr)
+            return 1
+
         report = []
         temp_path = tempfile.mkdtemp(prefix='uncrustify_')
         suffix = '.uncrustify'
@@ -176,7 +150,7 @@ def main(argv=sys.argv[1:]):
                     report.append((filename, diff_lines))
             if args.reformat:
                 # overwrite original with reformatted file
-                with open(filename, 'wb') as original_file:
+                with(open(filename, 'wb')) as original_file:
                     with open(modified_filename, 'rb') as modified_file:
                         original_file.write(modified_file.read())
     finally:

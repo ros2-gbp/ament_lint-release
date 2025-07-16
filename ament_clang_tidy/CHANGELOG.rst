@@ -2,84 +2,36 @@
 Changelog for package ament_clang_tidy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.1 (2025-06-19)
+0.12.13 (2025-07-16)
+--------------------
+
+0.12.12 (2025-03-25)
+--------------------
+
+0.12.11 (2024-05-15)
+--------------------
+* ament_clang_tidy - Fix Reporting when WarningsAsErrors is specified in config (`#397 <https://github.com/ament/ament_lint/issues/397>`_) (`#488 <https://github.com/ament/ament_lint/issues/488>`_)
+* Contributors: mergify[bot]
+
+0.12.10 (2024-01-24)
+--------------------
+
+0.12.9 (2023-11-13)
 -------------------
 
-0.20.0 (2025-04-24)
+0.12.8 (2023-09-19)
 -------------------
 
-0.19.2 (2025-04-17)
+0.12.7 (2023-07-17)
 -------------------
 
-0.19.1 (2025-02-02)
+0.12.6 (2023-04-25)
 -------------------
 
-0.19.0 (2024-11-20)
--------------------
-* Add ament_xmllint testing for all packages that we can. (`#508 <https://github.com/ament/ament_lint/issues/508>`_)
-* Contributors: Chris Lalancette
-
-0.18.1 (2024-06-17)
--------------------
-* ament_clang_tidy - Fix Reporting when WarningsAsErrors is specified in config (`#397 <https://github.com/ament/ament_lint/issues/397>`_)
-* Contributors: Matt Condino
-
-0.18.0 (2024-04-26)
+0.12.5 (2023-01-12)
 -------------------
 
-0.17.0 (2024-04-16)
--------------------
-
-0.16.4 (2024-03-28)
--------------------
-* Update maintainer list in package.xml files (`#474 <https://github.com/ament/ament_lint/issues/474>`_)
-* Contributors: Michael Jeronimo
-
-0.16.3 (2024-02-07)
--------------------
-* Fix a warning from newer versions of flake8. (`#469 <https://github.com/ament/ament_lint/issues/469>`_)
-* Contributors: Chris Lalancette
-
-0.16.2 (2023-12-26)
--------------------
-
-0.16.1 (2023-11-06)
--------------------
-* remove AMENT_IGNORE check in clang-tidy when looking for compilation db (`#441 <https://github.com/ament/ament_lint/issues/441>`_)
-* Contributors: Alberto Soragna
-
-0.16.0 (2023-10-04)
--------------------
-
-0.15.2 (2023-07-11)
--------------------
-
-0.15.1 (2023-06-07)
--------------------
-
-0.15.0 (2023-04-27)
--------------------
-
-0.14.1 (2023-04-11)
--------------------
-
-0.14.0 (2023-02-14)
--------------------
-* [rolling] Update maintainers - 2022-11-07 (`#421 <https://github.com/ament/ament_lint/issues/421>`_)
-* Contributors: Audrow Nash
-
-0.13.2 (2022-09-13)
--------------------
-* Update maintainers (`#379 <https://github.com/ament/ament_lint/issues/379>`_)
-* recommend use of --mixin compile-commands (`#371 <https://github.com/ament/ament_lint/issues/371>`_)
-* Contributors: William Woodall, methylDragon
-
-0.13.1 (2022-05-09)
--------------------
-* Improve message and avoid missing new lines between reports from files (`#373 <https://github.com/ament/ament_lint/issues/373>`_)
-* Contributors: William Woodall
-
-0.13.0 (2022-04-29)
+0.12.4 (2022-05-09)
 -------------------
 
 0.12.3 (2022-04-08)

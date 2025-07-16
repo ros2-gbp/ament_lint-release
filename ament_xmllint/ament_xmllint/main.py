@@ -29,7 +29,7 @@ from xml.sax.saxutils import quoteattr
 
 
 def main(argv=sys.argv[1:]):
-    default_extensions = ['xml']
+    extensions = ['xml']
 
     parser = argparse.ArgumentParser(
         description='Check XML markup using xmllint.',
@@ -38,10 +38,9 @@ def main(argv=sys.argv[1:]):
         'paths',
         nargs='*',
         default=[os.curdir],
-        help='The files or directories to check. For directories, only files ending '
-             'in %s will be considered (unless overruled by the --extensions '
-             'option)' %
-             ', '.join(["'.%s'" % e for e in default_extensions]))
+        help='The files or directories to check. For directories files ending '
+             'in %s will be considered.' %
+             ', '.join(["'.%s'" % e for e in extensions]))
     parser.add_argument(
         '--exclude',
         nargs='*',
@@ -50,11 +49,6 @@ def main(argv=sys.argv[1:]):
     # not using a file handle directly
     # in order to prevent leaving an empty file when something fails early
     parser.add_argument(
-        '--extensions',
-        nargs='*',
-        default=default_extensions,
-        help='The file extensions of the files to check')
-    parser.add_argument(
         '--xunit-file',
         help='Generate a xunit compliant XML file')
     args = parser.parse_args(argv)
@@ -62,7 +56,7 @@ def main(argv=sys.argv[1:]):
     if args.xunit_file:
         start_time = time.time()
 
-    files = get_files(args.paths, args.extensions, args.exclude)
+    files = get_files(args.paths, extensions, args.exclude)
     if not files:
         print('No files found', file=sys.stderr)
         return 1
