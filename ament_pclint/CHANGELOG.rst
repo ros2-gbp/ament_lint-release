@@ -2,6 +2,13 @@
 Changelog for package ament_pclint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.2 (2025-07-30)
+-------------------
+* clean setup.py (`#552 <https://github.com/ament/ament_lint/issues/552>`_)
+* fix setuptools deprecation (`#551 <https://github.com/ament/ament_lint/issues/551>`_)
+* fix setuptools deprecations (`#547 <https://github.com/ament/ament_lint/issues/547>`_)
+* Contributors: mosfet80
+
 0.20.1 (2025-06-19)
 -------------------
 
