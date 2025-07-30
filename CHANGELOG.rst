@@ -2,6 +2,9 @@
 Changelog for package ament_cmake_pep257
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.2 (2025-07-30)
+-------------------
+
 0.20.1 (2025-06-19)
 -------------------
 * Fix cmake deprecation (`#539 <https://github.com/ament/ament_lint/issues/539>`_)
