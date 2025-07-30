@@ -5,7 +5,7 @@ package_name = 'ament_clang_format'
 
 setup(
     name=package_name,
-    version='0.20.1',
+    version='0.20.2',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -26,7 +26,6 @@ setup(
     keywords=['ROS'],
     classifiers=[
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Topic :: Software Development',
     ],
@@ -35,7 +34,11 @@ setup(
 The ability to check code against style conventions using clang-format
 and generate xUnit test result files.""",
     license='Apache License, Version 2.0, BSD',
-    tests_require=['pytest'],
+    extras_require={
+        'test': [
+            'pytest',
+        ],
+    },
     entry_points={
         'console_scripts': [
             'ament_clang_format = ament_clang_format.main:main',
