@@ -67,7 +67,7 @@ As an example to exclude the `copyright` linter:
 How to exclude files with ament_lint_auto?
 ------------------------------------------
 
-Linter hooks conform to the ament_lint_auto convention of excluding files
+Linter hooks shall conform to the ament_lint_auto convention of excluding files
 specified in the CMake list variable `AMENT_LINT_AUTO_FILE_EXCLUDE`.
 As such, the CMake snippet from above can be modified to exclude files across
 all linters with one addition.
@@ -82,3 +82,22 @@ all linters with one addition.
       set(AMENT_LINT_AUTO_FILE_EXCLUDE /path/to/ignored_file ...)
       ament_lint_auto_find_test_dependencies()
     endif()
+
+For a more specific example, this excludes all python files matching a pattern using globbing.
+Multiple expressions can be combined on multiple lines.
+It might be a good idea to issue a warning to developers that linting is disabled
+if you plan to enable it at some point.
+
+.. code:: cmake
+
+      file(GLOB_RECURSE AMENT_LINT_AUTO_FILE_EXCLUDE
+        # Exclude all the python files in src directory
+        src/*.py
+        # Exclude all the c++ implementation files in test directory
+        test/*.cpp
+      )
+      message(AUTHOR_WARNING
+          "Ament lint auto tests are disabled on the following: "
+          ${AMENT_LINT_AUTO_FILE_EXCLUDE}
+      )
+
