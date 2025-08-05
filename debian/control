@@ -1,0 +1,12 @@
+Source: ros-jazzy-ament-mypy
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, python3-pytest-mock <!nocheck>, ros-jazzy-ament-flake8 <!nocheck>, ros-jazzy-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-ament-mypy
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-mypy, ros-jazzy-ros-workspace
+Description: Support for mypy static type checking in ament.
