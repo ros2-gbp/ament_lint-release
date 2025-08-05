@@ -2,34 +2,13 @@
 Changelog for package ament_clang_tidy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.2 (2025-07-30)
--------------------
-* fix setuptools deprecations (`#547 <https://github.com/ament/ament_lint/issues/547>`_)
-* Contributors: mosfet80
-
-0.20.1 (2025-06-19)
+0.17.3 (2025-08-05)
 -------------------
 
-0.20.0 (2025-04-24)
+0.17.2 (2025-04-02)
 -------------------
 
-0.19.2 (2025-04-17)
--------------------
-
-0.19.1 (2025-02-02)
--------------------
-
-0.19.0 (2024-11-20)
--------------------
-* Add ament_xmllint testing for all packages that we can. (`#508 <https://github.com/ament/ament_lint/issues/508>`_)
-* Contributors: Chris Lalancette
-
-0.18.1 (2024-06-17)
--------------------
-* ament_clang_tidy - Fix Reporting when WarningsAsErrors is specified in config (`#397 <https://github.com/ament/ament_lint/issues/397>`_)
-* Contributors: Matt Condino
-
-0.18.0 (2024-04-26)
+0.17.1 (2024-06-27)
 -------------------
 
 0.17.0 (2024-04-16)

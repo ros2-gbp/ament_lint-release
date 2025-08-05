@@ -5,7 +5,7 @@ package_name = 'ament_cpplint'
 
 setup(
     name=package_name,
-    version='0.20.2',
+    version='0.17.3',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -23,6 +23,7 @@ setup(
     keywords=['ROS'],
     classifiers=[
         'Intended Audience :: Developers',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Topic :: Software Development',
     ],
@@ -31,11 +32,7 @@ setup(
 The ability to check code against the Google style conventions using
 cpplint and generate xUnit test result files.""",
     license='Apache License, Version 2.0, BSD',
-    extras_require={
-        'test': [
-            'pytest',
-        ],
-    },
+    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'ament_cpplint = ament_cpplint.main:main',

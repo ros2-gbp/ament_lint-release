@@ -2,36 +2,20 @@
 Changelog for package ament_cpplint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.2 (2025-07-30)
+0.17.3 (2025-08-05)
 -------------------
-* fix setuptools deprecations (`#547 <https://github.com/ament/ament_lint/issues/547>`_)
-* Contributors: mosfet80
+* cpplint: update link to upstream cpplint repo (`#538 <https://github.com/ament/ament_lint/issues/538>`_) (`#542 <https://github.com/ament/ament_lint/issues/542>`_)
+  Since https://github.com/google/styleguide/pull/837 cpplint source code is
+  no longer hosted at https://github.com/google/styleguide but it is a
+  community driven project hosted at https://github.com/cpplint/cpplint
+  (cherry picked from commit f5db52813c07263db99a044fa7f7b2bcc2c628ec)
+  Co-authored-by: Romain Reignier <romainreignier@users.noreply.github.com>
+* Contributors: mergify[bot]
 
-0.20.1 (2025-06-19)
--------------------
-* cpplint: update link to upstream cpplint repo (`#538 <https://github.com/ament/ament_lint/issues/538>`_)
-* Contributors: Romain Reignier
-
-0.20.0 (2025-04-24)
--------------------
-
-0.19.2 (2025-04-17)
--------------------
-* Enable a quiet mode for cpplint (`#532 <https://github.com/ament/ament_lint/issues/532>`_)
-* Contributors: Nils-Christian Iseke
-
-0.19.1 (2025-02-02)
+0.17.2 (2025-04-02)
 -------------------
 
-0.19.0 (2024-11-20)
--------------------
-* Add ament_xmllint testing for all packages that we can. (`#508 <https://github.com/ament/ament_lint/issues/508>`_)
-* Contributors: Chris Lalancette
-
-0.18.1 (2024-06-17)
--------------------
-
-0.18.0 (2024-04-26)
+0.17.1 (2024-06-27)
 -------------------
 
 0.17.0 (2024-04-16)

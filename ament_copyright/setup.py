@@ -5,7 +5,7 @@ package_name = 'ament_copyright'
 
 setup(
     name=package_name,
-    version='0.20.2',
+    version='0.17.3',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -26,6 +26,7 @@ setup(
     keywords=['ROS'],
     classifiers=[
         'Intended Audience :: Developers',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Topic :: Software Development',
     ],
@@ -33,11 +34,7 @@ setup(
     long_description="""\
 The ability to check sources file for copyright and license information.""",
     license='Apache License, Version 2.0',
-    extras_require={
-        'test': [
-            'pytest',
-        ],
-    },
+    tests_require=['pytest'],
     entry_points={
         'ament_copyright.copyright_name': [
             'osrf = ament_copyright.copyright_names:osrf',
