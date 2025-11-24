@@ -5,7 +5,7 @@ package_name = 'ament_pclint'
 
 setup(
     name=package_name,
-    version='0.20.2',
+    version='0.20.3',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -32,7 +32,8 @@ setup(
         'config/c99.lnt',
         'config/c++.lnt',
         'config/deprecate.lnt',
-        'config/env-xml.lnt'
+        'config/env-xml.lnt',
+        'py.typed'
     ]},
     zip_safe=False,
     author='Juan Pablo Samper',
