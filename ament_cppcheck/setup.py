@@ -5,13 +5,14 @@ package_name = 'ament_cppcheck'
 
 setup(
     name=package_name,
-    version='0.20.2',
+    version='0.20.3',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
     ],
+    package_data={'': ['py.typed']},
     install_requires=['setuptools'],
     zip_safe=True,
     author='Dirk Thomas',
