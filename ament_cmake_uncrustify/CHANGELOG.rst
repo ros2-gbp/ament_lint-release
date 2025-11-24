@@ -2,6 +2,11 @@
 Changelog for package ament_cmake_uncrustify
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.3 (2025-11-24)
+-------------------
+* [ament_cmake_uncrustify] Add ament_cmake_uncrustify_LANGUAGE variable (`#384 <https://github.com/ament/ament_lint/issues/384>`_)
+* Contributors: Abrar Rahman Protyasha
+
 0.20.2 (2025-07-30)
 -------------------
 

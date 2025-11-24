@@ -5,7 +5,7 @@ package_name = 'ament_pep257'
 
 setup(
     name=package_name,
-    version='0.20.2',
+    version='0.20.3',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -15,6 +15,7 @@ setup(
     install_requires=['setuptools'],
     package_data={'': [
         'configuration/ament_pep257.ini',
+        'py.typed'
     ]},
     zip_safe=True,
     author='Dirk Thomas',
