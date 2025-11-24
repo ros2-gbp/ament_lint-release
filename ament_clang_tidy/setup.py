@@ -5,7 +5,7 @@ package_name = 'ament_clang_tidy'
 
 setup(
     name=package_name,
-    version='0.20.2',
+    version='0.20.3',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -15,6 +15,7 @@ setup(
     install_requires=['setuptools', 'pyyaml'],
     package_data={'': [
         'configuration/.clang-tidy',
+        'py.typed'
     ]},
     zip_safe=False,
     author='John Shepherd',
