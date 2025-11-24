@@ -61,10 +61,6 @@ boost1 = read_license_data(TEMPLATE_DIRECTORY,
                            'Boost Software License - Version 1.0',
                            'BSL-1.0',
                            'boost1')
-bsd2 = read_license_data(TEMPLATE_DIRECTORY,
-                         'BSD License 2.0',
-                         'BSD-2.0',
-                         'bsd2')
 bsd_3clause = read_license_data(TEMPLATE_DIRECTORY,
                                 '3-Clause BSD License',
                                 'BSD-3-Clause',

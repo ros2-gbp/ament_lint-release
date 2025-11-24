@@ -2,20 +2,41 @@
 Changelog for package ament_copyright
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.17.3 (2025-08-05)
+0.20.3 (2025-11-24)
+-------------------
+* Remove invalid license template. (`#209 <https://github.com/ament/ament_lint/issues/209>`_)
+* Export typing information for ament linters (`#553 <https://github.com/ament/ament_lint/issues/553>`_)
+* Contributors: Michael Carlstrom, Tully Foote
+
+0.20.2 (2025-07-30)
+-------------------
+* fix setuptools deprecations (`#547 <https://github.com/ament/ament_lint/issues/547>`_)
+* Contributors: mosfet80
+
+0.20.1 (2025-06-19)
 -------------------
 
-0.17.2 (2025-04-02)
+0.20.0 (2025-04-24)
 -------------------
 
-0.17.1 (2024-06-27)
+0.19.2 (2025-04-17)
 -------------------
-* Fix error path for search_copyright_information. (`#491 <https://github.com/ament/ament_lint/issues/491>`_) (`#492 <https://github.com/ament/ament_lint/issues/492>`_)
-  Callers now expect it to return a 4-tuple, but in the
-  case that there was no data it was only returning a 2-tuple.
-  (cherry picked from commit f5d1cad324be721f87fa87a416aa70701e75dcca)
-  Co-authored-by: Chris Lalancette <clalancette@gmail.com>
-* Contributors: mergify[bot]
+
+0.19.1 (2025-02-02)
+-------------------
+* Improve ament_copyright performance drastically. (`#515 <https://github.com/ament/ament_lint/issues/515>`_)
+* Contributors: Chris Lalancette
+
+0.19.0 (2024-11-20)
+-------------------
+
+0.18.1 (2024-06-17)
+-------------------
+* Fix error path for search_copyright_information. (`#491 <https://github.com/ament/ament_lint/issues/491>`_)
+* Contributors: Chris Lalancette
+
+0.18.0 (2024-04-26)
+-------------------
 
 0.17.0 (2024-04-16)
 -------------------
