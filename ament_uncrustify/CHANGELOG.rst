@@ -2,6 +2,13 @@
 Changelog for package ament_uncrustify
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.3 (2025-11-24)
+-------------------
+* Revert "Removed uncrustify_vendor (`#556 <https://github.com/ament/ament_lint/issues/556>`_)" (`#561 <https://github.com/ament/ament_lint/issues/561>`_)
+* Removed uncrustify_vendor (`#556 <https://github.com/ament/ament_lint/issues/556>`_)
+* Export typing information for ament linters (`#553 <https://github.com/ament/ament_lint/issues/553>`_)
+* Contributors: Alejandro Hernández Cordero, Michael Carlstrom, Michael Orlov
+
 0.20.2 (2025-07-30)
 -------------------
 * fix setuptools deprecations (`#547 <https://github.com/ament/ament_lint/issues/547>`_)

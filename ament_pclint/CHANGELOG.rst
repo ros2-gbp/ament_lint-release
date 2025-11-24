@@ -2,6 +2,11 @@
 Changelog for package ament_pclint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.3 (2025-11-24)
+-------------------
+* Export typing information for ament linters (`#553 <https://github.com/ament/ament_lint/issues/553>`_)
+* Contributors: Michael Carlstrom
+
 0.20.2 (2025-07-30)
 -------------------
 * clean setup.py (`#552 <https://github.com/ament/ament_lint/issues/552>`_)
