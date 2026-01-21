@@ -5,7 +5,7 @@ package_name = 'ament_copyright'
 
 setup(
     name=package_name,
-    version='0.20.3',
+    version='0.17.4',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -15,7 +15,6 @@ setup(
     install_requires=['setuptools'],
     package_data={'': [
         'template/*',
-        'py.typed'
     ]},
     zip_safe=False,
     author='Dirk Thomas',
@@ -27,6 +26,7 @@ setup(
     keywords=['ROS'],
     classifiers=[
         'Intended Audience :: Developers',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Topic :: Software Development',
     ],
@@ -34,11 +34,7 @@ setup(
     long_description="""\
 The ability to check sources file for copyright and license information.""",
     license='Apache License, Version 2.0',
-    extras_require={
-        'test': [
-            'pytest',
-        ],
-    },
+    tests_require=['pytest'],
     entry_points={
         'ament_copyright.copyright_name': [
             'osrf = ament_copyright.copyright_names:osrf',
@@ -46,6 +42,7 @@ The ability to check sources file for copyright and license information.""",
         'ament_copyright.license': [
             'apache2 = ament_copyright.licenses:apache2',
             'boost1 = ament_copyright.licenses:boost1',
+            'bsd2 = ament_copyright.licenses:bsd2',
             'bsd_3clause = ament_copyright.licenses:bsd_3clause',
             'bsd_2clause = ament_copyright.licenses:bsd_2clause',
             'mit = ament_copyright.licenses:mit',

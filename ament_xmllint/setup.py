@@ -5,14 +5,13 @@ package_name = 'ament_xmllint'
 
 setup(
     name=package_name,
-    version='0.20.3',
+    version='0.17.4',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
     ],
-    package_data={'': ['py.typed']},
     install_requires=['setuptools'],
     zip_safe=True,
     author='Dirk Thomas',
@@ -24,6 +23,7 @@ setup(
     keywords=['ROS'],
     classifiers=[
         'Intended Audience :: Developers',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Topic :: Software Development',
     ],
@@ -32,11 +32,7 @@ setup(
 The ability to check XML files like the package manifest using xmllint
 and generate xUnit test result files.""",
     license='Apache License, Version 2.0',
-    extras_require={
-        'test': [
-            'pytest',
-        ],
-    },
+    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'ament_xmllint = ament_xmllint.main:main',
