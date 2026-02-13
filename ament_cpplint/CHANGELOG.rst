@@ -2,77 +2,45 @@
 Changelog for package ament_cpplint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.17.4 (2026-01-21)
--------------------
+0.12.15 (2026-02-13)
+--------------------
 
-0.17.3 (2025-08-05)
--------------------
-* cpplint: update link to upstream cpplint repo (`#538 <https://github.com/ament/ament_lint/issues/538>`_) (`#542 <https://github.com/ament/ament_lint/issues/542>`_)
-  Since https://github.com/google/styleguide/pull/837 cpplint source code is
-  no longer hosted at https://github.com/google/styleguide but it is a
-  community driven project hosted at https://github.com/cpplint/cpplint
-  (cherry picked from commit f5db52813c07263db99a044fa7f7b2bcc2c628ec)
-  Co-authored-by: Romain Reignier <romainreignier@users.noreply.github.com>
+0.12.14 (2025-07-18)
+--------------------
+
+0.12.13 (2025-07-16)
+--------------------
+* cpplint: update link to upstream cpplint repo (`#538 <https://github.com/ament/ament_lint/issues/538>`_) (`#543 <https://github.com/ament/ament_lint/issues/543>`_)
 * Contributors: mergify[bot]
 
-0.17.2 (2025-04-02)
+0.12.12 (2025-03-25)
+--------------------
+
+0.12.11 (2024-05-15)
+--------------------
+
+0.12.10 (2024-01-24)
+--------------------
+
+0.12.9 (2023-11-13)
 -------------------
 
-0.17.1 (2024-06-27)
+0.12.8 (2023-09-19)
 -------------------
 
-0.17.0 (2024-04-16)
+0.12.7 (2023-07-17)
 -------------------
 
-0.16.4 (2024-03-28)
--------------------
-* Update maintainer list in package.xml files (`#474 <https://github.com/ament/ament_lint/issues/474>`_)
-* Contributors: Michael Jeronimo
-
-0.16.3 (2024-02-07)
+0.12.6 (2023-04-25)
 -------------------
 
-0.16.2 (2023-12-26)
+0.12.5 (2023-01-12)
 -------------------
 
-0.16.1 (2023-11-06)
+0.12.4 (2022-05-09)
 -------------------
-
-0.16.0 (2023-10-04)
--------------------
-* Pass --output argument to cpplint (`#453 <https://github.com/ament/ament_lint/issues/453>`_)
-* Contributors: Vladimir Ivan
-
-0.15.2 (2023-07-11)
--------------------
-
-0.15.1 (2023-06-07)
--------------------
-
-0.15.0 (2023-04-27)
--------------------
-
-0.14.1 (2023-04-11)
--------------------
-
-0.14.0 (2023-02-14)
--------------------
-* [rolling] Update maintainers - 2022-11-07 (`#421 <https://github.com/ament/ament_lint/issues/421>`_)
-* Contributors: Audrow Nash
-
-0.13.2 (2022-09-13)
--------------------
-* [ament_cpplint] Process errors without linenums (`#385 <https://github.com/ament/ament_lint/issues/385>`_)
-* Update maintainers (`#379 <https://github.com/ament/ament_lint/issues/379>`_)
-* Contributors: Abrar Rahman Protyasha, methylDragon
-
-0.13.1 (2022-05-09)
--------------------
-* Consider files with '.hh' extension as C++ headers (`#374 <https://github.com/ament/ament_lint/issues/374>`_)
+* Consider files with '.hh' extension as C++ headers (`#374 <https://github.com/ament/ament_lint/issues/374>`_) (`#381 <https://github.com/ament/ament_lint/issues/381>`_)
 * Contributors: Jacob Perron
-
-0.13.0 (2022-04-29)
--------------------
 
 0.12.3 (2022-04-08)
 -------------------
