@@ -1,0 +1,12 @@
+Source: ros-kilted-ament-cmake-uncrustify
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake-copyright <!nocheck>, ros-kilted-ament-cmake-core, ros-kilted-ament-cmake-lint-cmake <!nocheck>, ros-kilted-ament-cmake-test, ros-kilted-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kilted-ament-cmake-uncrustify
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-ament-cmake-test, ros-kilted-ament-uncrustify, ros-kilted-ros-workspace
+Description: The CMake API for ament_uncrustify to check code against styleconventions using uncrustify.
