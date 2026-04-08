@@ -2,6 +2,13 @@
 Changelog for package ament_copyright
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.4 (2026-04-08)
+-------------------
+* [ament_mypy] Fix config for ament_cmake packages and type entrypoints (`#574 <https://github.com/ament/ament_lint/issues/574>`_)
+* Drop setuptools from install_requires (`#566 <https://github.com/ament/ament_lint/issues/566>`_)
+* Remove `importlib_metadata` (`#564 <https://github.com/ament/ament_lint/issues/564>`_)
+* Contributors: Jochen Sprickerhof, Michael Carlstrom
+
 0.20.3 (2025-11-24)
 -------------------
 * Remove invalid license template. (`#209 <https://github.com/ament/ament_lint/issues/209>`_)
