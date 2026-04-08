@@ -2,6 +2,12 @@
 Changelog for package ament_flake8
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.4 (2026-04-08)
+-------------------
+* [ament_mypy] Add `--ament-strict` flag for more strict type checking. (`#573 <https://github.com/ament/ament_lint/issues/573>`_)
+* Drop setuptools from install_requires (`#566 <https://github.com/ament/ament_lint/issues/566>`_)
+* Contributors: Jochen Sprickerhof, Michael Carlstrom
+
 0.20.3 (2025-11-24)
 -------------------
 * Drop dependency on python3-flake8-docstrings (`#513 <https://github.com/ament/ament_lint/issues/513>`_)
