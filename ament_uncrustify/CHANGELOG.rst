@@ -2,6 +2,12 @@
 Changelog for package ament_uncrustify
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.4 (2026-04-08)
+-------------------
+* [ament_mypy] Fix config for ament_cmake packages and type entrypoints (`#574 <https://github.com/ament/ament_lint/issues/574>`_)
+* Drop setuptools from install_requires (`#566 <https://github.com/ament/ament_lint/issues/566>`_)
+* Contributors: Jochen Sprickerhof, Michael Carlstrom
+
 0.20.3 (2025-11-24)
 -------------------
 * Revert "Removed uncrustify_vendor (`#556 <https://github.com/ament/ament_lint/issues/556>`_)" (`#561 <https://github.com/ament/ament_lint/issues/561>`_)
