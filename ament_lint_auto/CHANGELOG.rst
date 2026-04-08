@@ -2,26 +2,24 @@
 Changelog for package ament_lint_auto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.19.3 (2026-04-08)
+0.17.5 (2026-04-08)
 -------------------
-* Fix cmake deprecation (`#539 <https://github.com/ament/ament_lint/issues/539>`_) (`#540 <https://github.com/ament/ament_lint/issues/540>`_)
+
+0.17.4 (2026-01-21)
+-------------------
+
+0.17.3 (2025-08-05)
+-------------------
+
+0.17.2 (2025-04-02)
+-------------------
+* Add docu for AMENT_LINT_AUTO_EXCLUDE (`#524 <https://github.com/ament/ament_lint/issues/524>`_) (`#525 <https://github.com/ament/ament_lint/issues/525>`_)
+  Co-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>
+  (cherry picked from commit 40fa2bd8d842b77b5f7996f7a5b4b49126339e3b)
+  Co-authored-by: Alexander Reimann <reimann.alex88@gmail.com>
 * Contributors: mergify[bot]
 
-0.19.2 (2025-04-17)
--------------------
-* Add docu for AMENT_LINT_AUTO_EXCLUDE (`#524 <https://github.com/ament/ament_lint/issues/524>`_)
-* Contributors: Alexander Reimann
-
-0.19.1 (2025-02-02)
--------------------
-
-0.19.0 (2024-11-20)
--------------------
-
-0.18.1 (2024-06-17)
--------------------
-
-0.18.0 (2024-04-26)
+0.17.1 (2024-06-27)
 -------------------
 
 0.17.0 (2024-04-16)

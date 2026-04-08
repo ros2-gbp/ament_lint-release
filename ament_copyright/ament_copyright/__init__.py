@@ -12,8 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from importlib import metadata
-import sys
+try:
+    import importlib.metadata as importlib_metadata
+except ModuleNotFoundError:
+    import importlib_metadata
 
 
 COPYRIGHT_GROUP = 'ament_copyright.copyright_name'
@@ -36,8 +38,8 @@ UNKNOWN_IDENTIFIER = '<unknown>'
 
 def get_copyright_names():
     names = {}
-    entry_points = metadata.entry_points()
-    if sys.version_info >= (3, 12):
+    entry_points = importlib_metadata.entry_points()
+    if hasattr(entry_points, 'select'):
         copyright_groups = entry_points.select(group=COPYRIGHT_GROUP)
     else:
         copyright_groups = entry_points.get(COPYRIGHT_GROUP, [])
@@ -51,8 +53,8 @@ def get_copyright_names():
 
 def get_licenses():
     licenses = {}
-    entry_points = metadata.entry_points()
-    if sys.version_info >= (3, 12):
+    entry_points = importlib_metadata.entry_points()
+    if hasattr(entry_points, 'select'):
         license_groups = entry_points.select(group=LICENSE_GROUP)
     else:
         license_groups = entry_points.get(LICENSE_GROUP, [])

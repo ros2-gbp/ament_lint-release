@@ -2,29 +2,26 @@
 Changelog for package ament_copyright
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.19.3 (2026-04-08)
+0.17.5 (2026-04-08)
 -------------------
-* Remove `importlib_metadata` (`#564 <https://github.com/ament/ament_lint/issues/564>`_) (`#565 <https://github.com/ament/ament_lint/issues/565>`_)
+
+0.17.4 (2026-01-21)
+-------------------
+
+0.17.3 (2025-08-05)
+-------------------
+
+0.17.2 (2025-04-02)
+-------------------
+
+0.17.1 (2024-06-27)
+-------------------
+* Fix error path for search_copyright_information. (`#491 <https://github.com/ament/ament_lint/issues/491>`_) (`#492 <https://github.com/ament/ament_lint/issues/492>`_)
+  Callers now expect it to return a 4-tuple, but in the
+  case that there was no data it was only returning a 2-tuple.
+  (cherry picked from commit f5d1cad324be721f87fa87a416aa70701e75dcca)
+  Co-authored-by: Chris Lalancette <clalancette@gmail.com>
 * Contributors: mergify[bot]
-
-0.19.2 (2025-04-17)
--------------------
-
-0.19.1 (2025-02-02)
--------------------
-* Improve ament_copyright performance drastically. (`#515 <https://github.com/ament/ament_lint/issues/515>`_)
-* Contributors: Chris Lalancette
-
-0.19.0 (2024-11-20)
--------------------
-
-0.18.1 (2024-06-17)
--------------------
-* Fix error path for search_copyright_information. (`#491 <https://github.com/ament/ament_lint/issues/491>`_)
-* Contributors: Chris Lalancette
-
-0.18.0 (2024-04-26)
--------------------
 
 0.17.0 (2024-04-16)
 -------------------

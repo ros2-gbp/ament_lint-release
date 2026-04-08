@@ -2,26 +2,26 @@
 Changelog for package ament_pclint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.19.3 (2026-04-08)
+0.17.5 (2026-04-08)
 -------------------
-* fix setuptools deprecation (backport `#551 <https://github.com/ament/ament_lint/issues/551>`_) (`#558 <https://github.com/ament/ament_lint/issues/558>`_)
+
+0.17.4 (2026-01-21)
+-------------------
+* fix setuptools deprecation (backport `#551 <https://github.com/ament/ament_lint/issues/551>`_) (`#559 <https://github.com/ament/ament_lint/issues/559>`_)
+  * fix setuptools deprecation (`#551 <https://github.com/ament/ament_lint/issues/551>`_)
+  (cherry picked from commit 6c532cfefefcb1af20bdb84d5d4d246571713830)
+  * clean setup.py (`#552 <https://github.com/ament/ament_lint/issues/552>`_)
+  ---------
+  Co-authored-by: mosfet80 <10235105+mosfet80@users.noreply.github.com>
 * Contributors: mergify[bot]
 
-0.19.2 (2025-04-17)
+0.17.3 (2025-08-05)
 -------------------
 
-0.19.1 (2025-02-02)
+0.17.2 (2025-04-02)
 -------------------
 
-0.19.0 (2024-11-20)
--------------------
-* Add ament_xmllint testing for all packages that we can. (`#508 <https://github.com/ament/ament_lint/issues/508>`_)
-* Contributors: Chris Lalancette
-
-0.18.1 (2024-06-17)
--------------------
-
-0.18.0 (2024-04-26)
+0.17.1 (2024-06-27)
 -------------------
 
 0.17.0 (2024-04-16)
