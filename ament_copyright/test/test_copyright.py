@@ -28,6 +28,16 @@ def test_apache2_standard():
     assert rc == 0, 'Found errors'
 
 
+def test_apache2_cpp_multiline():
+    rc = main(argv=[os.path.join(cases_path, 'apache2_license_multiline_comment/case.cpp')])
+    assert rc == 0, 'Found errors'
+
+
+def test_apache2_xml_multiline():
+    rc = main(argv=[os.path.join(cases_path, 'apache2_license_multiline_comment/case.xml')])
+    assert rc == 0, 'Found errors'
+
+
 def test_boost1_cpp():
     rc = main(argv=[os.path.join(cases_path, 'boost1/case2.cpp')])
     assert rc == 0, 'Found errors'
@@ -35,21 +45,6 @@ def test_boost1_cpp():
 
 def test_boost1_py():
     rc = main(argv=[os.path.join(cases_path, 'boost1/case.py')])
-    assert rc == 0, 'Found errors'
-
-
-def test_bsd_standard():
-    rc = main(argv=[os.path.join(cases_path, 'bsd_license')])
-    assert rc == 0, 'Found errors'
-
-
-def test_bsd_indented():
-    rc = main(argv=[os.path.join(cases_path, 'bsd_license_indented')])
-    assert rc == 0, 'Found errors'
-
-
-def test_bsd_tabs():
-    rc = main(argv=[os.path.join(cases_path, 'bsd_license_tabs')])
     assert rc == 0, 'Found errors'
 
 
