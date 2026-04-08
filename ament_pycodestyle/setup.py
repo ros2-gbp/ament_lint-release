@@ -5,14 +5,13 @@ package_name = 'ament_pycodestyle'
 
 setup(
     name=package_name,
-    version='0.20.3',
+    version='0.20.4',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
     ],
-    install_requires=['setuptools'],
     package_data={'': [
         'configuration/ament_pycodestyle.ini',
         'py.typed'
