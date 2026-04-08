@@ -2,6 +2,13 @@
 Changelog for package ament_xmllint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.4 (2026-04-08)
+-------------------
+* [ament_mypy] Add `--ament-strict` flag for more strict type checking. (`#573 <https://github.com/ament/ament_lint/issues/573>`_)
+* xmllint: fetch external schemas via Python (`#570 <https://github.com/ament/ament_lint/issues/570>`_)
+* Drop setuptools from install_requires (`#566 <https://github.com/ament/ament_lint/issues/566>`_)
+* Contributors: Jochen Sprickerhof, Michael Carlstrom, Michael Carroll
+
 0.20.3 (2025-11-24)
 -------------------
 * Export typing information for ament linters (`#553 <https://github.com/ament/ament_lint/issues/553>`_)
