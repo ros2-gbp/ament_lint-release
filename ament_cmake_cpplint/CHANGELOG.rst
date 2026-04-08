@@ -2,6 +2,9 @@
 Changelog for package ament_cmake_cpplint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.4 (2026-04-08)
+-------------------
+
 0.20.3 (2025-11-24)
 -------------------
 * Fixing EXCLUDE consistency (`#481 <https://github.com/ament/ament_lint/issues/481>`_)

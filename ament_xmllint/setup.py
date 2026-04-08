@@ -5,7 +5,7 @@ package_name = 'ament_xmllint'
 
 setup(
     name=package_name,
-    version='0.20.3',
+    version='0.20.4',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -13,7 +13,6 @@ setup(
             ['resource/' + package_name]),
     ],
     package_data={'': ['py.typed']},
-    install_requires=['setuptools'],
     zip_safe=True,
     author='Dirk Thomas',
     author_email='dthomas@osrfoundation.org',
