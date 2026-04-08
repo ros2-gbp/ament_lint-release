@@ -5,16 +5,16 @@ package_name = 'ament_mypy'
 
 setup(
     name=package_name,
-    version='0.20.3',
+    version='0.20.4',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
     ],
-    install_requires=['setuptools'],
     package_data={'': [
         'configuration/ament_mypy.ini',
+        'configuration/ament_mypy_strict.toml',
         'py.typed'
     ]},
     zip_safe=False,
