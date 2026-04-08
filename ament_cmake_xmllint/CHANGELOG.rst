@@ -2,22 +2,10 @@
 Changelog for package ament_cmake_xmllint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.4 (2026-04-08)
+0.19.3 (2026-04-08)
 -------------------
-
-0.20.3 (2025-11-24)
--------------------
-
-0.20.2 (2025-07-30)
--------------------
-
-0.20.1 (2025-06-19)
--------------------
-* Fix cmake deprecation (`#539 <https://github.com/ament/ament_lint/issues/539>`_)
-* Contributors: mosfet80
-
-0.20.0 (2025-04-24)
--------------------
+* Fix cmake deprecation (`#539 <https://github.com/ament/ament_lint/issues/539>`_) (`#540 <https://github.com/ament/ament_lint/issues/540>`_)
+* Contributors: mergify[bot]
 
 0.19.2 (2025-04-17)
 -------------------

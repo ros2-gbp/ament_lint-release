@@ -2,25 +2,11 @@
 Changelog for package ament_cmake_cpplint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.4 (2026-04-08)
+0.19.3 (2026-04-08)
 -------------------
-
-0.20.3 (2025-11-24)
--------------------
-* Fixing EXCLUDE consistency (`#481 <https://github.com/ament/ament_lint/issues/481>`_)
-* Contributors: Tom Moore
-
-0.20.2 (2025-07-30)
--------------------
-
-0.20.1 (2025-06-19)
--------------------
-* cpplint: update link to upstream cpplint repo (`#538 <https://github.com/ament/ament_lint/issues/538>`_)
-* Fix cmake deprecation (`#539 <https://github.com/ament/ament_lint/issues/539>`_)
-* Contributors: Romain Reignier, mosfet80
-
-0.20.0 (2025-04-24)
--------------------
+* Fix cmake deprecation (`#539 <https://github.com/ament/ament_lint/issues/539>`_) (`#540 <https://github.com/ament/ament_lint/issues/540>`_)
+* cpplint: update link to upstream cpplint repo (`#538 <https://github.com/ament/ament_lint/issues/538>`_) (`#541 <https://github.com/ament/ament_lint/issues/541>`_)
+* Contributors: mergify[bot]
 
 0.19.2 (2025-04-17)
 -------------------

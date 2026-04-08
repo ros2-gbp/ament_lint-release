@@ -17,14 +17,13 @@
 import argparse
 import os
 import sys
-from typing import Literal
 from xml.sax.saxutils import escape
 from xml.sax.saxutils import quoteattr
 
 import pycodestyle
 
 
-def main(argv: list[str] = sys.argv[1:]) -> Literal[0, 1]:
+def main(argv=sys.argv[1:]):
     config_file = os.path.join(
         os.path.dirname(__file__), 'configuration', 'ament_pycodestyle.ini')
 

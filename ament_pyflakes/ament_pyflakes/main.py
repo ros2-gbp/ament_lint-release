@@ -18,7 +18,6 @@ import argparse
 import os
 import sys
 import time
-from typing import Literal
 from xml.sax.saxutils import escape
 from xml.sax.saxutils import quoteattr
 
@@ -27,7 +26,7 @@ from pyflakes.messages import Message
 from pyflakes.reporter import Reporter
 
 
-def main(argv: list[str] = sys.argv[1:]) -> Literal[0, 1]:
+def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser(
         description='Check code using pyflakes.',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)

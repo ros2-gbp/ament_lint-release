@@ -2,29 +2,10 @@
 Changelog for package ament_copyright
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.4 (2026-04-08)
+0.19.3 (2026-04-08)
 -------------------
-* [ament_mypy] Fix config for ament_cmake packages and type entrypoints (`#574 <https://github.com/ament/ament_lint/issues/574>`_)
-* Drop setuptools from install_requires (`#566 <https://github.com/ament/ament_lint/issues/566>`_)
-* Remove `importlib_metadata` (`#564 <https://github.com/ament/ament_lint/issues/564>`_)
-* Contributors: Jochen Sprickerhof, Michael Carlstrom
-
-0.20.3 (2025-11-24)
--------------------
-* Remove invalid license template. (`#209 <https://github.com/ament/ament_lint/issues/209>`_)
-* Export typing information for ament linters (`#553 <https://github.com/ament/ament_lint/issues/553>`_)
-* Contributors: Michael Carlstrom, Tully Foote
-
-0.20.2 (2025-07-30)
--------------------
-* fix setuptools deprecations (`#547 <https://github.com/ament/ament_lint/issues/547>`_)
-* Contributors: mosfet80
-
-0.20.1 (2025-06-19)
--------------------
-
-0.20.0 (2025-04-24)
--------------------
+* Remove `importlib_metadata` (`#564 <https://github.com/ament/ament_lint/issues/564>`_) (`#565 <https://github.com/ament/ament_lint/issues/565>`_)
+* Contributors: mergify[bot]
 
 0.19.2 (2025-04-17)
 -------------------

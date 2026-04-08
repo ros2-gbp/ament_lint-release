@@ -5,13 +5,14 @@ package_name = 'ament_pclint'
 
 setup(
     name=package_name,
-    version='0.20.4',
+    version='0.19.3',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
     ],
+    install_requires=['setuptools'],
     package_data={'': [
         'config/gcc/co-g++.h',
         'config/gcc/co-g++.lnt',
@@ -31,8 +32,7 @@ setup(
         'config/c99.lnt',
         'config/c++.lnt',
         'config/deprecate.lnt',
-        'config/env-xml.lnt',
-        'py.typed'
+        'config/env-xml.lnt'
     ]},
     zip_safe=False,
     author='Juan Pablo Samper',
