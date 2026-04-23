@@ -24,7 +24,7 @@ from typing import List, Match, Optional, Tuple
 from xml.sax.saxutils import escape
 from xml.sax.saxutils import quoteattr
 
-import mypy.api  # type: ignore
+import mypy.api
 
 
 def main(argv: List[str] = sys.argv[1:]) -> int:
@@ -33,13 +33,32 @@ def main(argv: List[str] = sys.argv[1:]) -> int:
         description='Check code using mypy',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
-    parser.add_argument(
+
+    config_group = parser.add_mutually_exclusive_group()
+    config_group.add_argument(
         '--config',
         metavar='path',
         dest='config_file',
-        default=os.path.join(os.path.dirname(__file__), 'configuration', 'ament_mypy.ini'),
-        help='The config file'
+        default=os.path.join(
+            os.path.dirname(__file__),
+            'configuration',
+            'ament_mypy.ini',
+        ),
+        help='The config file',
     )
+
+    config_group.add_argument(
+        '--ament-strict',
+        action='store_const',
+        dest='config_file',
+        const=os.path.join(
+            os.path.dirname(__file__),
+            'configuration',
+            'ament_mypy_strict.toml',
+        ),
+        help='Use strict ament mypy configuration',
+    )
+
     parser.add_argument(
         'paths',
         nargs='*',
@@ -137,7 +156,7 @@ def main(argv: List[str] = sys.argv[1:]) -> int:
 def _generate_mypy_report(paths: List[str],
                           config_file: Optional[str] = None,
                           cache_dir: str = os.devnull) -> Tuple[str, str, int]:
-    mypy_argv = []
+    mypy_argv: list[str] = []
     mypy_argv.append('--cache-dir')
     mypy_argv.append(str(cache_dir))
     if cache_dir == os.devnull:
@@ -148,11 +167,11 @@ def _generate_mypy_report(paths: List[str],
     mypy_argv.append('--show-error-context')
     mypy_argv.append('--show-column-numbers')
     mypy_argv += paths
-    res = mypy.api.run(mypy_argv)  # type: Tuple[str, str, int]
+    res = mypy.api.run(mypy_argv)
     return res
 
 
-def _get_xunit_content(errors: List[Match],
+def _get_xunit_content(errors: List[Match[str]],
                        testname: str,
                        filenames: List[str],
                        elapsed: float) -> str:
@@ -230,7 +249,8 @@ def _get_files(paths: List[str]) -> List[str]:
                         type_stub_path = os.path.join(dirpath, filename)
                         files.append(type_stub_path)
 
-                        regular_file_path = type_stub_path.removesuffix('i')
+                        # removes suffix i
+                        regular_file_path = type_stub_path[:-len('i')]
                         # Use type stub over file
                         if regular_file_path in files:
                             files.remove(regular_file_path)
@@ -239,7 +259,7 @@ def _get_files(paths: List[str]) -> List[str]:
     return [os.path.normpath(f) for f in files]
 
 
-def _get_errors(report_string: str) -> List[Match]:
+def _get_errors(report_string: str) -> List[Match[str]]:
     return list(re.finditer(r'^(?P<filename>([a-zA-Z]:)?([^:])+):((?P<lineno>\d+):)?((?P<colno>\d+):)?\ (?P<type>error|warning|note):\ (?P<msg>.*)$', report_string, re.MULTILINE))  # noqa: E501
 
 

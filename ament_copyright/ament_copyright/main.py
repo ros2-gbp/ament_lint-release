@@ -18,6 +18,7 @@ import os
 import re
 import sys
 import time
+from typing import Literal
 from xml.sax.saxutils import escape
 from xml.sax.saxutils import quoteattr
 
@@ -36,7 +37,7 @@ from ament_copyright.parser import scan_past_empty_lines
 from ament_copyright.parser import search_copyright_information
 
 
-def main(argv=sys.argv[1:]):
+def main(argv: list[str] = sys.argv[1:]) -> Literal[0, 1]:
     extensions = [
         'c', 'cc', 'cpp', 'cxx', 'h', 'hh', 'hpp', 'hxx',
         'cmake',
@@ -114,7 +115,7 @@ def main(argv=sys.argv[1:]):
 
     file_descriptors = {}
     for filename in sorted(filenames):
-        file_descriptors[filename] = parse_file(filename)
+        file_descriptors[filename] = parse_file(filename, licenses, names)
 
     if args.add_missing:
         name = names.get(args.add_missing[0], args.add_missing[0])
