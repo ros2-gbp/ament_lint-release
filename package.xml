@@ -20,7 +20,7 @@
   <author email="michel@ekumenlabs.com">Michel Hidalgo</author>
 
   <exec_depend>ament_lint</exec_depend>
-  <exec_depend>pydocstyle</exec_depend>
+  <!-- <exec_depend>pydocstyle</exec_depend> Not available on RHEL 10 -->
 
   <test_depend>ament_flake8</test_depend>
   <test_depend>python3-pytest</test_depend>
