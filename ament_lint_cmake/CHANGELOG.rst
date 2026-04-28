@@ -2,9 +2,6 @@
 Changelog for package ament_lint_cmake
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.5 (2026-04-23)
--------------------
-
 0.20.4 (2026-04-08)
 -------------------
 * Drop setuptools from install_requires (`#566 <https://github.com/ament/ament_lint/issues/566>`_)
