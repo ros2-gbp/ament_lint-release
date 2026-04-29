@@ -1,0 +1,12 @@
+Source: ros-lyrical-ament-cmake-clang-tidy
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake-copyright <!nocheck>, ros-lyrical-ament-cmake-core, ros-lyrical-ament-cmake-lint-cmake <!nocheck>, ros-lyrical-ament-cmake-test, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/ament_cmake_clang_tidy/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-ament-cmake-clang-tidy
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-ament-clang-tidy, ros-lyrical-ament-cmake-test, ros-lyrical-ros-workspace
+Description: The CMake API for ament_clang_tidy to lint C / C++ code using clang tidy.
