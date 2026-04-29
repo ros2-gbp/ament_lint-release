@@ -2,6 +2,9 @@
 Changelog for package ament_cmake_mypy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.5 (2026-04-23)
+-------------------
+
 0.20.4 (2026-04-08)
 -------------------
 * [ament_mypy] Add `--ament-strict` flag for more strict type checking. (`#573 <https://github.com/ament/ament_lint/issues/573>`_)
