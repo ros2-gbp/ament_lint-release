@@ -1,0 +1,12 @@
+Source: ros-lyrical-ament-xmllint
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, ros-lyrical-ament-copyright <!nocheck>, ros-lyrical-ament-flake8 <!nocheck>, ros-lyrical-ament-pep257 <!nocheck>, ros-lyrical-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: https://index.ros.org/p/ament_xmllint/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-ament-xmllint
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, libxml2-utils, ros-lyrical-ament-lint, ros-lyrical-ros-workspace
+Description: The ability to check XML files like the package manifest using xmllint and generate xUnit test result files.
