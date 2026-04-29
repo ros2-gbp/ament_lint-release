@@ -1,0 +1,12 @@
+Source: ros-lyrical-ament-cmake-copyright
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake-core, ros-lyrical-ament-cmake-lint-cmake <!nocheck>, ros-lyrical-ament-cmake-test, ros-lyrical-ament-copyright, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/ament_cmake_copyright/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-ament-cmake-copyright
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-ament-cmake-test, ros-lyrical-ament-copyright, ros-lyrical-ros-workspace
+Description: The CMake API for ament_copyright to check every source file contains copyright reference.
