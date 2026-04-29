@@ -1,0 +1,12 @@
+Source: ros-lyrical-ament-cmake-lint-cmake
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake-core, ros-lyrical-ament-cmake-test, ros-lyrical-ament-lint-cmake, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/ament_cmake_lint_cmake/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-ament-cmake-lint-cmake
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-ament-cmake-test, ros-lyrical-ament-lint-cmake, ros-lyrical-ros-workspace
+Description: The CMake API for ament_lint_cmake to lint CMake code using cmakelint.
