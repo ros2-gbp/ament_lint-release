@@ -1,1 +1,1 @@
-{"base": "4e682524414c", "parent": "release/rolling/ament_cmake_clang_tidy/0.20.5-3", "previous": "7d0a7c8aeb9f", "trim": "", "trimbase": ""}
+{"base": "cfc78beb18", "parent": "release/rolling/ament_cmake_clang_tidy", "previous": "ba8e583b95", "trim": "", "trimbase": ""}
