@@ -1,1 +1,1 @@
-{"base": "db0104a149", "parent": "debian/rolling/ament_cmake_flake8", "previous": "27e5d4c23e", "trim": "", "trimbase": ""}
+{"base": "a1070c5f53", "parent": "debian/rolling/ament_cmake_flake8", "previous": "6371b9cda5", "trim": "", "trimbase": ""}
