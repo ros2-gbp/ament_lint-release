@@ -8,7 +8,7 @@ Subject: [PATCH] Drop dependency on pydocstyle, which is not available
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index 4d1b59288961..7140b856e94b 100644
+index 4d1b592889..7140b856e9 100644
 --- a/package.xml
 +++ b/package.xml
 @@ -20,7 +20,7 @@
@@ -21,5 +21,5 @@ index 4d1b59288961..7140b856e94b 100644
    <test_depend>ament_flake8</test_depend>
    <test_depend>python3-pytest</test_depend>
 -- 
-2.53.0
+2.43.0
 
