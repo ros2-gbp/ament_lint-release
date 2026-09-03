@@ -2,6 +2,9 @@
 Changelog for package ament_uncrustify
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.21.2 (2026-09-03)
+-------------------
+
 0.21.1 (2026-05-15)
 -------------------
 * Update uncrustify version selection to support >= 0.78.1 (`#581 <https://github.com/ament/ament_lint/issues/581>`_)
