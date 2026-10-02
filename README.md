@@ -1,3 +1,57 @@
+## ament_lint (rolling) - 0.21.3-1
+
+The packages in the `ament_lint` repository were released into the `rolling` distro by running `/home/cottsay/infra_ws/install/bin/bloom-release -r rolling ament_lint` on `Fri, 02 Oct 2026 19:58:13 -0000`
+
+These packages were released:
+- `ament_clang_format`
+- `ament_clang_tidy`
+- `ament_cmake_clang_format`
+- `ament_cmake_clang_tidy`
+- `ament_cmake_copyright`
+- `ament_cmake_cppcheck`
+- `ament_cmake_cpplint`
+- `ament_cmake_flake8`
+- `ament_cmake_lint_cmake`
+- `ament_cmake_mypy`
+- `ament_cmake_pclint`
+- `ament_cmake_pep257`
+- `ament_cmake_pycodestyle`
+- `ament_cmake_pyflakes`
+- `ament_cmake_uncrustify`
+- `ament_cmake_xmllint`
+- `ament_copyright`
+- `ament_cppcheck`
+- `ament_cpplint`
+- `ament_flake8`
+- `ament_lint`
+- `ament_lint_auto`
+- `ament_lint_cmake`
+- `ament_lint_common`
+- `ament_mypy`
+- `ament_pclint`
+- `ament_pep257`
+- `ament_pycodestyle`
+- `ament_pyflakes`
+- `ament_uncrustify`
+- `ament_xmllint`
+
+Version of package(s) in repository `ament_lint`:
+
+- upstream repository: https://github.com/ament/ament_lint.git
+- release repository: https://github.com/ros2-gbp/ament_lint-release.git
+- rosdistro version: `0.21.2-1`
+- old version: `0.21.2-1`
+- new version: `0.21.3-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.4`
+- catkin_pkg version: `1.1.1`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.1.0`
+- vcstools version: `0.1.42`
+
+
 ## ament_lint (rolling) - 0.21.2-1
 
 The packages in the `ament_lint` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling --track rolling ament_lint` on `Thu, 03 Sep 2026 14:02:37 -0000`
