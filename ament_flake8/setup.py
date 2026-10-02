@@ -5,7 +5,7 @@ package_name = 'ament_flake8'
 
 setup(
     name=package_name,
-    version='0.21.2',
+    version='0.21.3',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -32,7 +32,7 @@ setup(
     description='Check Python code style using flake8.',
     long_description="""\
 The ability to check code for syntax and style conventions with flake8.""",
-    license='Apache License, Version 2.0',
+    license='Apache-2.0',
     extras_require={
         'test': [
             'pytest',
