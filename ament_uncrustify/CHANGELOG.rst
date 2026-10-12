@@ -2,21 +2,13 @@
 Changelog for package ament_uncrustify
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.21.3 (2026-10-02)
--------------------
-* Use the SPDX identifier Apache-2.0 in license declarations (`#598 <https://github.com/ament/ament_lint/issues/598>`_)
-* Contributors: Michael Carroll
-
-0.21.2 (2026-09-03)
+0.20.7 (2026-10-12)
 -------------------
 
-0.21.1 (2026-05-15)
+0.20.6 (2026-05-15)
 -------------------
-* Update uncrustify version selection to support >= 0.78.1 (`#581 <https://github.com/ament/ament_lint/issues/581>`_)
-* Contributors: Michael Carroll
-
-0.21.0 (2026-05-05)
--------------------
+* Update uncrustify version selection to support >= 0.78.1 (`#581 <https://github.com/ament/ament_lint/issues/581>`_) (`#582 <https://github.com/ament/ament_lint/issues/582>`_)
+* Contributors: mergify[bot]
 
 0.20.5 (2026-04-23)
 -------------------
