@@ -1,0 +1,12 @@
+Source: ros-lyrical-ament-pyflakes
+Section: misc
+Priority: optional
+Maintainer: "Chris Lalancette" <clalancette@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, ros-lyrical-ament-pycodestyle <!nocheck>, ros-lyrical-ament-xmllint <!nocheck>, ros-lyrical-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: https://index.ros.org/p/ament_pyflakes/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-ament-pyflakes
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, pyflakes3, ros-lyrical-ros-workspace
+Description: The ability to check code using pyflakes and generate xUnit test result files.
