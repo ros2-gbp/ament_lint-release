@@ -2,12 +2,24 @@
 Changelog for package ament_clang_tidy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.7 (2026-10-12)
+0.21.4 (2026-10-22)
 -------------------
-* Fix ament_clang tools windows support (`#563 <https://github.com/ament/ament_lint/issues/563>`_)
-* Contributors: tony-p
+* Fix unit test source detection on Windows (`#593 <https://github.com/ament/ament_lint//issues/593>`_)
+* Contributors: Daisuke Kato
 
-0.20.6 (2026-05-15)
+0.21.3 (2026-10-02)
+-------------------
+* Use the SPDX identifier Apache-2.0 in license declarations (`#598 <https://github.com/ament/ament_lint/issues/598>`_)
+* Fix ament_clang tools windows support (`#563 <https://github.com/ament/ament_lint/issues/563>`_)
+* Contributors: Michael Carroll, tony-p
+
+0.21.2 (2026-09-03)
+-------------------
+
+0.21.1 (2026-05-15)
+-------------------
+
+0.21.0 (2026-05-05)
 -------------------
 
 0.20.5 (2026-04-23)
