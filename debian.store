@@ -1,1 +1,1 @@
-{"base": "cb60abcacb2b", "parent": "debian/rolling/ament_cmake_cppcheck", "previous": "c5b587c86efb", "trim": "", "trimbase": ""}
+{"base": "54ada5194c", "parent": "debian/rolling/ament_cmake_cppcheck", "previous": "b144d245d3", "trim": "", "trimbase": ""}
